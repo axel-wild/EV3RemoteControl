@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ev3control.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <LinearLayout
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="connect"
+            android:text="@string/searching_devices" />
+        <!--<ToggleButton
+            android:id="@+id/btnStartStop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/on_off_toogle"
+            android:onClick="onStartStopEV3"
+            android:text="ToggleButton" />-->
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+        <RelativeLayout
+            android:id="@+id/layoutControl"
+            android:layout_width="match_parent"
+            android:layout_height="324dp"
+            android:background="@drawable/ic_launcher_background"
+            android:gravity="center">
+
+            <View
+                android:id="@+id/bar_hor"
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/holo_red_dark"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="254dp" />
+
+            <View
+                android:id="@+id/bar_ver"
+                android:layout_width="2dp"
+                android:layout_height="fill_parent"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/holo_red_dark"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="254dp" />
+
+            <ImageView
+                android:id="@+id/iv_control"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                app:srcCompat="@android:drawable/presence_online" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_acc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/tv_speed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+        <FrameLayout
+            android:id="@+id/sample_content_fragment"
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:layout_height="0px" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
